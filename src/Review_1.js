@@ -33,7 +33,7 @@ class Review_1 extends Component {
                             <a class="nav-link dropdown-toggle text-end me-5 mt-3" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Panuwat</a>
                             <ul class="dropdown-menu">
 
-                                <li><a class="dropdown-item" href="#">Account17</a></li>
+                                <li><a class="dropdown-item" href="#">Account18</a></li>
 
 
 
