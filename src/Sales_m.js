@@ -8,12 +8,12 @@ class Sales_m extends Component {
         super(props);
         this.state = {
             arr: [
-                {name: "กะเพราไก่", item: 152},
-                {name: "แกงจืด", item: 145},
-                {name: "ผัดไทย", item: 138},
-                {name: "ข้าวหมูกรอบไข่ต้ม", item: 136},
-                {name: "ข้าวต้มกุ้ง", item: 130},
-                {name: "ข้าวผัดปู", item: 126},
+                { name: "กะเพราไก่", item: 152 },
+                { name: "แกงจืด", item: 145 },
+                { name: "ผัดไทย", item: 138 },
+                { name: "ข้าวหมูกรอบไข่ต้ม", item: 136 },
+                { name: "ข้าวต้มกุ้ง", item: 130 },
+                { name: "ข้าวผัดปู", item: 126 },
             ]
         };
     }
@@ -53,8 +53,8 @@ class Sales_m extends Component {
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col text-start ms-1 mt-3">
-                                Review
+                            <div class="col text-start ms-1 mt-3" onClick={() => { this.props.history.replace('/rm') }}>
+                                รีวิว
                             </div>
                         </div>
                         <div class="row">
@@ -86,23 +86,23 @@ class Sales_m extends Component {
                     <div class="col">
                         <div class="row">
                             <div class="col-6 mt-3 border-end border-2 border-secondary" style={divStyle}>
-                            <div class="row border-top border-2 border-secondary">
-                                <div class="col mt-2 border-bottom border-2 border-secondary text-center">
-                                    รายการอาหารที่ขาย
+                                <div class="row border-top border-2 border-secondary">
+                                    <div class="col mt-2 border-bottom border-2 border-secondary text-center">
+                                        รายการอาหารที่ขาย
                                 </div>
-                            </div>
-                            <div class="row mt-2">
+                                </div>
+                                <div class="row mt-2">
                                     <div class="col">
-                                        <button class="btn btn-secondary ">
+                                        <button class="btn btn-secondary " onClick={() => { this.props.history.replace('/sm') }}>
                                             ต่อวัน
                                         </button>
                                         <button class="btn btn-success ms-1">
                                             ต่อเดือน
                                         </button>
-                                        <button class="btn btn-secondary ms-1">
+                                        <button class="btn btn-secondary ms-1" onClick={() => { this.props.history.replace('/ss') }}>
                                             ต่อปี
                                         </button>
-                                        <button class="btn btn-secondary ms-1 me-5">
+                                        <button class="btn btn-secondary ms-1 me-5" onClick={() => { this.props.history.replace('/sss') }}>
                                             คลอดการเปิดราย
                                         </button>
                                         <button class="btn btn-success ms-5">
@@ -115,26 +115,26 @@ class Sales_m extends Component {
                                 </div>
                                 <div class="row mt-2 border-top border-2 border-secondary">
                                     <div class="col">
-                                    <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">เมนู</th>
-                                        <th></th>
-                                        <th scope="col">จำนวน</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {
-                                        this.state.arr.map((i,j) =>
-                                            <tr>
-                                                <td>{i.name}</td>
-                                                <td></td>
-                                                <td>{i.item}</td> 
-                                            </tr>
-                                        )
-                                    }
-                                </tbody>
-                            </table>
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">เมนู</th>
+                                                    <th></th>
+                                                    <th scope="col">จำนวน</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {
+                                                    this.state.arr.map((i, j) =>
+                                                        <tr>
+                                                            <td>{i.name}</td>
+                                                            <td></td>
+                                                            <td>{i.item}</td>
+                                                        </tr>
+                                                    )
+                                                }
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
