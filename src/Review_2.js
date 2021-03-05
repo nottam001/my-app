@@ -68,7 +68,7 @@ class Review_2 extends Component {
                                 <img src={review} alt="" height="80" ></img>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row border-start border-success border-5">
                             <div class="col text-start ms-1 mt-3">
                                 รีวิว
                             </div>
