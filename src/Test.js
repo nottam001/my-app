@@ -55,6 +55,7 @@ class Test extends Component {
 
         // console.log(123)
     }
+
     // -------------------------------------
     //               DELETE
     // -------------------------------------
@@ -76,7 +77,6 @@ class Test extends Component {
 
         // console.log(123)
     }
-
 
     // -------------------------------------
     //               SELECT
