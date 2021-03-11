@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './asset/img/logo.png'
 import review from './asset/img/review.png'
 import star5 from './asset/img/star5.png'
 import star4 from './asset/img/star4.png'
@@ -7,6 +6,7 @@ import star3 from './asset/img/star3.png'
 import star2 from './asset/img/star2.png'
 import star1 from './asset/img/star1.png'
 import { Bar } from 'react-chartjs-2';
+import Navbar from './Nav_a';
 
 class Review_5 extends Component {
     constructor(props) {
@@ -46,20 +46,7 @@ class Review_5 extends Component {
 
         return (
             <div class="container-fluid ">
-                <nav class="bd-subnavbar sticky-top" aria-label="secondary navigation">
-                    <div class="row border-bottom border-3 border-success bg-white">
-                        <div class="col-2 text-center">
-                            <img src={logo} alt="" height="75"></img>
-                        </div>
-                        <div class="col-2 offset-8">
-                            <a class="nav-link dropdown-toggle text-end me-5 mt-3" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Panuwat</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Account</a></li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                <Navbar />
                 <div class="row">
                     <div class="col-2 border-end border-3 border-success mt-3" style={divStyle}>
 
