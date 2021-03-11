@@ -59,11 +59,11 @@ class Test extends Component {
     // -------------------------------------
     //               DELETE
     // -------------------------------------
-    Delete() {
+    Delete(id) {
         var data = new FormData();
         data.append(
             "ID",
-            document.getElementById("IDDelete").value
+            id
         );
         const axios = require('axios');
         axios.post('http://localhost/delete.php', data)
@@ -75,9 +75,8 @@ class Test extends Component {
                 console.log(error);
             });
 
-        // console.log(123)
+        console.log(123)
     }
-
     // -------------------------------------
     //               SELECT
     // -------------------------------------
@@ -144,7 +143,7 @@ class Test extends Component {
                                                 <td>{j + 1}</td>
                                                 <td>{i.ID}</td>
                                                 <td>{i.NAME}</td>
-                                                <td>{i.TIME}</td>
+                                                <td><button class="btn btn-info" onClick={this.Delete.bind(this, i.ID)}>Delete</button></td>
                                             </tr>
                                         )
                                     }
