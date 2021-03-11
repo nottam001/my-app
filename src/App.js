@@ -12,6 +12,7 @@ import Sales_y from './Sales_y'
 import Sales_a from './Sales_a'
 import Nav_a from './Nav_a'
 import CommentBox from './CommentBox'
+import Test from './Test'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/sss" component={Sales_a} />
           <Route path="/nv" component={Nav_a} />
           <Route path="/cm" component={CommentBox} />
+          <Route path="/test" component={Test} />
         </Switch>
       </div>
     </Router>
