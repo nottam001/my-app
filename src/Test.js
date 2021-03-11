@@ -10,7 +10,9 @@ class Test extends Component {
         this.Update = this.Update.bind(this);
         this.Delete = this.Delete.bind(this);
     }
-
+    // -------------------------------------
+    //               INSERT
+    // -------------------------------------
     Insert() {
         var data = new FormData();
         data.append(
@@ -28,7 +30,9 @@ class Test extends Component {
                 console.log(error);
             });
     }
-    
+    // -------------------------------------
+    //               UPDATE
+    // -------------------------------------
     Update() {
         var data = new FormData();
         data.append(
@@ -51,6 +55,9 @@ class Test extends Component {
 
         // console.log(123)
     }
+    // -------------------------------------
+    //               DELETE
+    // -------------------------------------
     Delete() {
         var data = new FormData();
         data.append(
@@ -70,6 +77,10 @@ class Test extends Component {
         // console.log(123)
     }
 
+
+    // -------------------------------------
+    //               SELECT
+    // -------------------------------------
     componentDidMount(Code) {
         const axios = require("axios");
         axios
@@ -126,11 +137,11 @@ class Test extends Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-                             
+
                                     {
-                                         clients.map((i,j) =>
+                                        clients.map((i, j) =>
                                             <tr>
-                                                <td>{j+1}</td>
+                                                <td>{j + 1}</td>
                                                 <td>{i.ID}</td>
                                                 <td>{i.NAME}</td>
                                                 <td>{i.TIME}</td>
