@@ -10,6 +10,8 @@ import Sales_main from './Sales_main'
 import Sales_m from './Sales_m'
 import Sales_y from './Sales_y'
 import Sales_a from './Sales_a'
+import Nav_a from './Nav_a'
+import CommentBox from './CommentBox'
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/s" component={Sales_m} />
           <Route path="/ss" component={Sales_y} />
           <Route path="/sss" component={Sales_a} />
+          <Route path="/nv" component={Nav_a} />
+          <Route path="/cm" component={CommentBox} />
         </Switch>
       </div>
     </Router>

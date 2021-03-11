@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './asset/img/logo.png'
 import sales from './asset/img/sales.png'
 import { Bar } from 'react-chartjs-2';
+import Navbar from './Nav_a';
 
 class Sales_y extends Component {
     constructor(props) {
@@ -50,20 +50,7 @@ class Sales_y extends Component {
 
         return (
             <div class="container-fluid ">
-                <nav class="bd-subnavbar sticky-top" aria-label="secondary navigation">
-                    <div class="row border-bottom border-3 border-success bg-white">
-                        <div class="col-2 text-center">
-                            <img src={logo} alt="" height="75"></img>
-                        </div>
-                        <div class="col-2 offset-8">
-                            <a class="nav-link dropdown-toggle text-end me-5 mt-3" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Panuwat</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Account</a></li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                <Navbar />
                 <div class="row">
                     <div class="col-2 border-end border-3 border-success mt-3" style={divStyle}>
 
