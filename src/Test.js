@@ -95,7 +95,7 @@ class Test extends Component {
             });
         // console.log(123)
         console.log(this.state.clients)
-    }
+    };
 
     render() {
         let { clients } = this.state;
@@ -137,7 +137,6 @@ class Test extends Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-
                                     {
                                         clients.map((i, j) =>
                                             <tr>
@@ -152,7 +151,6 @@ class Test extends Component {
                             </table>
                         </div>
                     </div>
-
                 </div>
             </div>
 

@@ -11,8 +11,11 @@ import Sales_m from './Sales_m'
 import Sales_y from './Sales_y'
 import Sales_a from './Sales_a'
 import Nav_a from './Nav_a'
+import review_count from './review_count'
 import CommentBox from './CommentBox'
 import Test from './Test'
+import review_g from './review_g'
+import sales_g from './sales_g'
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
           <Route path="/nv" component={Nav_a} />
           <Route path="/cm" component={CommentBox} />
           <Route path="/test" component={Test} />
+          <Route path="/rc" component={review_count} />
+          <Route path="/rg" component={review_g} />
+          <Route path="/sg" component={sales_g} />
         </Switch>
       </div>
     </Router>

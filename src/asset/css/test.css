@@ -1,0 +1,20 @@
+.content {
+    display: flex;
+    flex-flow: row wrap;
+}
+.flexitem2 {
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+.log_area {
+    height: 325px;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    /* overflow-x: scroll; */
+}
+
+.log_item {
+    word-wrap: break-word;
+    padding: 20px;
+}
