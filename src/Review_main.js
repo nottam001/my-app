@@ -16,22 +16,26 @@ class Review_main extends Component {
         super(props);
         this.state = {
             arr: [],
-            clients: ["อาหารอร่อยมากๆครับ", "อาหารอร่อยมากคะ", "อาหารอร่อยมากครับ", "ชอบเมนูในร้านมาก", "พนักงานบริการไม่ดีเลยครับ"],
+            clients: [],
         };
     }
+
+    componentDidMount(Code) {
+        const axios = require("axios");
+        var tmp = []
+        axios
+            .get("http://localhost:99/select.php")
+            .then((response) => {
+                this.setState({ clients: response.data });
+            }).then(() => {
+                console.log(this.state.clients)
+            })
+            .catch(function (error) {
+                console.log(error);
+            }
+        );
+    };
     
-    // componentDidMount(Code) {
-    //     const axios = require("axios");
-    //     axios
-    //         .get("http://localhost:99/select.php")
-    //         .then((response) => {
-    //             this.setState({ clients: response.data });
-    //         })
-    //         .catch(function (error) {
-    //             console.log(error);
-    //         });
-    //     console.log(this.state.clients)
-    // }
 
     render() {
         const divStyle = {
@@ -93,7 +97,7 @@ class Review_main extends Component {
                         </div>
                     </div>
                     <div class="col-10">
-                    <Rvc />
+                        <Rvc />
                         <div class="row" style={divStyless}>
                             <div class="col-6 border-end border-2 border-secondary ">
                                 <div class="row mt-2">
@@ -124,6 +128,7 @@ class Review_main extends Component {
                                             <div class='flexitem2'>
                                                 <div class="log_area">
                                                     <div class="log_item">
+
                                                         {
                                                             clients.map((i, j) =>
                                                                 <div>
@@ -139,7 +144,7 @@ class Review_main extends Component {
                                                                                     รีวิวอาหาร
                                                                                 </div>
                                                                                 <div class={styles.content} class='ms-2 mt-1'>
-                                                                                    {i}
+                                                                                    {i.comment}
                                                                                 </div>
                                                                             </div>
                                                                             <hr></hr>
