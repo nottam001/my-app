@@ -9,6 +9,7 @@ import Navbar from './Nav_a';
 import Rvc from './review_count';
 import Rg from './review_g'
 import styles from './asset/css/test.css';
+import axios from 'axios';
 
 class Review_main extends Component {
     constructor(props) {
@@ -17,8 +18,8 @@ class Review_main extends Component {
             arr: [],
             clients: ["อาหารอร่อยมากๆครับ", "อาหารอร่อยมากคะ", "อาหารอร่อยมากครับ", "ชอบเมนูในร้านมาก", "พนักงานบริการไม่ดีเลยครับ"],
         };
-
     }
+    
     // componentDidMount(Code) {
     //     const axios = require("axios");
     //     axios
