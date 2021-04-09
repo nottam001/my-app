@@ -14,8 +14,9 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM `reviewmenu`";
-$userData = mysqli_query($conn,"SELECT * FROM `reviewmenu`"); //$sql = "SELECT * FROM `reviewmenu` ORDER BY `comment`  ASC";
+
+// $sql = "SELECT * FROM `reviewmenu`";
+$userData = mysqli_query($conn,"SELECT * FROM `reviewrestaurant`"); //$sql = "SELECT * FROM `reviewmenu` ORDER BY `comment`  ASC";
 $response = array();
 
 while($row = mysqli_fetch_assoc($userData)){
